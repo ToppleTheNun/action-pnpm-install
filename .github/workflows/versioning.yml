@@ -1,5 +1,9 @@
 name: Keep the versions up-to-date
 
+permissions:
+  issues: write
+  pull-requests: write
+
 on:
   release:
     types: [published, edited]
