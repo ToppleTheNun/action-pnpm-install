@@ -1,9 +1,5 @@
 name: Keep the versions up-to-date
 
-permissions:
-  issues: write
-  pull-requests: write
-
 on:
   release:
     types: [published, edited]
@@ -15,3 +11,4 @@ jobs:
       - uses: Actions-R-Us/actions-tagger@latest
         with:
           publish_latest_tag: true
+          token: ${{ secrets.TAG_PAT }}
