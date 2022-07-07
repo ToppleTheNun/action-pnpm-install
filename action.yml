@@ -1,5 +1,9 @@
 name: "pnpm install"
 description: "Installs dependencies via pnpm"
+inputs:
+  version:
+    description: Version of pnpm to install
+    default: 7.1.0
 runs:
   using: "composite"
   steps:
@@ -11,7 +15,7 @@ runs:
     - name: Install pnpm
       uses: pnpm/action-setup@v2.2.2
       with:
-        version: 7.1.0
+        version: ${{ inputs.version }}
 
     - name: Get pnpm store directory
       id: pnpm-cache
