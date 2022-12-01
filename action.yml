@@ -1,9 +1,5 @@
 name: "pnpm install"
 description: "Installs dependencies via pnpm"
-inputs:
-  version:
-    description: Version of pnpm to install
-    default: 7.1.0
 runs:
   using: "composite"
   steps:
