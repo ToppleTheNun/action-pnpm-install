@@ -3,13 +3,14 @@ description: "Installs dependencies via pnpm"
 runs:
   using: "composite"
   steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2.2.4
+
     - name: Use Node.js from .nvmrc
       uses: actions/setup-node@v3
       with:
         cache: "pnpm"
         node-version-file: ".nvmrc"
 
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2.2.4
-      with:
-        run-install: true
+    - name: Install via pnpm
+      run: pnpm install
