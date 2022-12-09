@@ -14,3 +14,4 @@ runs:
 
     - name: Install via pnpm
       run: pnpm install
+      shell: bash
