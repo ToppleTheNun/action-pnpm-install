@@ -4,7 +4,7 @@ runs:
   using: "composite"
   steps:
     - name: Install pnpm
-      uses: pnpm/action-setup@v2.2.4
+      uses: pnpm/action-setup@v2.4.0
 
     - name: Use Node.js from .nvmrc
       uses: actions/setup-node@v3
